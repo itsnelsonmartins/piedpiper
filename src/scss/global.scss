@@ -1,0 +1,30 @@
+// @import 'spectre.css/src/spectre';
+@import 'bulma/bulma.sass';
+
+$ppGreen: #009954;
+$ppGreenDark: #0b534c;
+$ppGreenLight: #02967a;
+$ppGreenAccent1: #04f9ca;
+$ppGreenAccent2: #7cfce4;
+$darkBlue: #1b1c33;
+$greyish: #f2f2f2;
+$whiteish: #fdfdfd;
+
+@import 'header';
+@import 'main';
+@import 'feature';
+@import 'footer';
+
+html,
+body {
+    background-color: $greyish;
+}
+
+.justGreen {
+    color: $ppGreen;
+    font-weight: bold;
+}
+
+.makeItGreen {
+    background-color: $ppGreen;
+}

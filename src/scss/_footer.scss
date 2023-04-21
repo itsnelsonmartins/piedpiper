@@ -1,0 +1,20 @@
+.footer {
+    background-color: $darkBlue;
+    color: $ppGreenLight;
+
+    & p.title {
+        color: $greyish;
+    }
+
+    & li {
+        list-style-type: none;
+    }
+
+    & li a {
+        color: $greyish;
+
+        &:hover {
+            color: $ppGreenLight;
+        }
+    }
+}

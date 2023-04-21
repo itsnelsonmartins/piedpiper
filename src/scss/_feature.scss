@@ -1,0 +1,13 @@
+.feature {
+    background-color: $ppGreenDark;
+    color: $whiteish;
+
+    & h1 {
+        color: $whiteish;
+    }
+
+    .timer {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+}
