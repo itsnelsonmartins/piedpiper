@@ -1,5 +1,6 @@
-// @import 'spectre.css/src/spectre';
 @import 'bulma/bulma.sass';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
 $ppGreen: #009954;
 $ppGreenDark: #0b534c;
@@ -18,11 +19,12 @@ $whiteish: #fdfdfd;
 html,
 body {
     background-color: $greyish;
+    font-family: 'Poppins', sans-serif;
 }
 
 .justGreen {
     color: $ppGreen;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .makeItGreen {
