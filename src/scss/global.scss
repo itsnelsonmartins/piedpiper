@@ -5,8 +5,6 @@
 $ppGreen: #009954;
 $ppGreenDark: #0b534c;
 $ppGreenLight: #02967a;
-$ppGreenAccent1: #04f9ca;
-$ppGreenAccent2: #7cfce4;
 $darkBlue: #1b1c33;
 $greyish: #f2f2f2;
 $whiteish: #fdfdfd;
@@ -20,6 +18,7 @@ html,
 body {
     background-color: $greyish;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .justGreen {

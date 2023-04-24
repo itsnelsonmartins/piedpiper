@@ -34,6 +34,15 @@ a.navbar-item {
     z-index: 1;
 }
 
+.scrollToTop {
+    width: 40px;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    display: none;
+    z-index: 1;
+}
+
 .down-arrow {
     width: 50px;
     position: absolute;

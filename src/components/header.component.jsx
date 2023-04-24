@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Header() {
+    const [isActive, setIsActive] = useState(false);
+
     const ppMiddleOutCompression = () => {
         let scrollTop = window.scrollY;
 
@@ -24,14 +26,32 @@ function Header() {
         ).style.background = `linear-gradient(to right, #009954 ${scrollPercentRounded}%, #f2f2f2 ${scrollPercentRounded}%)`;
     };
 
+    const scrollToTopShowButton = () => {
+        if (window.scrollY > 500) {
+            document.querySelector('.scrollToTop').style.display = 'block';
+        } else {
+            document.querySelector('.scrollToTop').style.display = 'none';
+        }
+    };
+
     addEventListener('scroll', (event) => {
         ppMiddleOutCompression();
         progressBarLoading();
+        scrollToTopShowButton();
     });
 
     return (
         <>
             <div className='pb'></div>
+            <a
+                href=''
+                onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className='scrollToTop'>
+                <img src='assets/images/up.svg' alt='scroll to top button' />
+            </a>
 
             <nav className='navbar is-transparent is-spaced' role='navigation' aria-label='main navigation'>
                 <div className='container'>
@@ -40,8 +60,11 @@ function Header() {
                             <img src='assets/images/logo.svg' alt='logo' width='50' />
                         </a>
                         <a
+                            onClick={() => {
+                                setIsActive(!isActive);
+                            }}
                             role='button'
-                            className='navbar-burger'
+                            className={`navbar-burger burger ${isActive ? 'is-active' : ''}`}
                             aria-label='menu'
                             aria-expanded='false'
                             data-target='navbarBasicExample'>
@@ -50,7 +73,7 @@ function Header() {
                             <span aria-hidden='true'></span>
                         </a>
                     </div>
-                    <div id='navMenu' className='navbar-menu'>
+                    <div id='navMenu' className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
                         <div className='navbar-start'>
                             <a href='#' className='navbar-item'>
                                 About
